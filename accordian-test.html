@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <style>
+
+
+        .slider-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .slider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #EDBD13;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        /* Customize slide styles */
+        .slider-1-res,
+        .slider-2-res,
+        .slider-3-res {
+            border-radius: 10px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Add the following styles to center the slide content */
+        .slider-1-res-main,
+        .slider-2-res-main,
+        .slider-3-res-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        /* Adjust button styles as needed */
+        .buttons-combo {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        #prevBtn,
+        #nextBtn {
+            background-color: white;
+            border: navajowhite;
+        }
+
+        #prevBtn img {
+            width: 57px;
+        }
+
+        #nextBtn img {
+            width: 47px;
+        }
+
+        .slider-1-res-main-logo img {
+            width: 10rem;
+        }
+
+        .slider-1-res-main-title h5 {
+            padding-bottom: 8px;
+        }
+
+        .slider-1-res-main-sub-title h1 {
+            margin-bottom: 31px;
+        }
+
+        .slider-1-res-main-details p {
+            margin-bottom: 44px;
+        }
+
+        .slider-1-res-main-link a {
+            color: #EDBD13;
+            font-weight: 700;
+        }
+
+
+
+        .slider-2-res-main-logo img {
+            width: 10rem;
+        }
+
+        .slider-2-res-main-title h5 {
+            padding-bottom: 8px;
+        }
+
+        .slider-2-res-main-sub-title h1 {
+            margin-bottom: 31px;
+        }
+
+        .slider-2-res-main-details p {
+            margin-bottom: 44px;
+        }
+
+        .slider-2-res-main-link a {
+            color: #EDBD13;
+            font-weight: 700;
+        }
+
+
+        .slider-3-res-main-logo img {
+            width: 10rem;
+        }
+
+        .slider-3-res-main-title h5 {
+            padding-bottom: 8px;
+        }
+
+        .slider-3-res-main-sub-title h1 {
+            margin-bottom: 31px;
+        }
+
+        .slider-3-res-main-details p {
+            margin-bottom: 44px;
+        }
+
+        .slider-3-res-main-link a {
+            color: #EDBD13;
+            font-weight: 700;
+        }
+
+        .slider-container {
+                display: none;
+            }
+
+        @media (max-width: 768px) {
+            .slider-container {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+                <div class="slider-1-res">
+                    <div class="slider-1-res-main">
+                        <div class="slider-1-res-main-logo">
+                            <img src="./img/StockHive-ai-black-logo.png" alt="StockHive-ai-black-logo">
+                        </div>
+                        <div class="slider-1-res-main-title">
+                            <h5>Level: Beginner</h5>
+                        </div>
+                        <div class="slider-1-res-main-sub-title">
+                            <h1>Mastering Portfolio Management</h1>
+                        </div>
+                        <div class="slider-1-res-main-details">
+                            <p>Ready to take your investment game to the next level? This mini-course is your perfect
+                                companion. Learn the A-Z of portfolio management, from building a balanced portfolio to
+                                understanding risk-reward dynamics. Jump in and make your portfolio shine!</p>
+                        </div>
+                        <div class="slider-1-res-main-link">
+                            <p><a href="#">Read Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slider-2-res">
+                    <div class="slider-2-res-main">
+                        <div class="slider-2-res-main-logo">
+                            <img src="./img/StockHive-ai-black-logo.png" alt="StockHive-ai-black-logo">
+                        </div>
+                        <div class="slider-2-res-main-title">
+                            <h5>Level: Beginner</h5>
+                        </div>
+                        <div class="slider-2-res-main-sub-title">
+                            <h1>How to open a Demat Account</h1>
+                        </div>
+                        <div class="slider-2-res-main-details">
+                            <p>Get started with trading with our simple guide on opening your first Demat account.
+                                Learn what a Demat account is, why it's important, and the steps to set one up, all in
+                                this compact mini-course. Dive in and gear up for your trading adventure! 🧭</p>
+                        </div>
+                        <div class="slider-2-res-main-link">
+                            <p><a href="#">Read Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slider-3-res">
+                    <div class="slider-3-res-main">
+                        <div class="slider-3-res-main-logo">
+                            <img src="./img/StockHive-ai-black-logo.png" alt="StockHive-ai-black-logo">
+                        </div>
+                        <div class="slider-3-res-main-title">
+                            <h5>Level: Beginner</h5>
+                        </div>
+                        <div class="slider-3-res-main-sub-title">
+                            <h1>Intraday Trading 101</h1>
+                        </div>
+                        <div class="slider-3-res-main-details">
+                            <p>New to intraday trading? No worries! This mini-course has got you covered. From
+                                understanding what intraday trading is to grasping basic strategies and terminologies,
+                                we'll guide you through it all. Buckle up and prepare for a fun ride into the world of
+                                intraday trading!</p>
+                        </div>
+                        <div class="slider-3-res-main-link">
+                            <p><a href="#">Read Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons-combo">
+            <button id="prevBtn"><img src="./img/slider-left-icon.png" alt="left-button-slider"></button>
+            <button id="nextBtn"><img src="./img/slider-right-icon.png" alt="right-button-slider"></button>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            var currentSlide = 0;
+            var totalSlides = $('.slide').length;
+
+            function showSlide(index) {
+                $('.slide').removeClass('active');
+                $('.slide').eq(index).addClass('active');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                showSlide(currentSlide);
+            }
+
+            $('#nextBtn').click(nextSlide);
+            $('#prevBtn').click(prevSlide);
+
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+
+</html>
